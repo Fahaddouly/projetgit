@@ -82,5 +82,23 @@
       <p>&copy; 2025 Voyage Mali. Tous droits réservés.</p>
     </div>
   </footer>
+  <script>
+    function initMap() {
+      const bamako = { lat: 12.6392, lng: -8.0029 };
+      const map = new google.maps.Map(document.getElementById("googleMap"), {
+        zoom: 12,
+        center: bamako,
+      });
+      new google.maps.Marker({
+        position: bamako,
+        map: map,
+        title: "Agence Bamako",
+      });
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
+    <script src="script.js"></script>  
 </body>
 </html>
